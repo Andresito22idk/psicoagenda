@@ -1,0 +1,105 @@
+.home {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra superior */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.logout {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Fecha */
+.fecha {
+  margin-top: 20px;
+}
+
+.fecha input[type="date"] {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.msg-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Subtítulo */
+.subtitulo {
+  margin-top: 25px;
+  font-size: 22px;
+}
+
+/* Cards */
+.profesionales {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.foto {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.especialidad {
+  color: #666;
+}
+
+/* Botón agendar */
+.btn-agendar {
+  margin-top: 10px;
+  background: #3498db;
+  padding: 8px 14px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Acciones */
+.acciones {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.btn-turnos {
+  background: #27ae60;
+  padding: 10px 16px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}

@@ -1,0 +1,48 @@
+<div class="page">
+  <div class="login-container">
+
+    <h1 class="title">Psico-Agenda</h1>
+
+    <div class="login-box">
+
+      <h3>Ingresar</h3>
+
+      <!-- CORREO -->
+      <input
+        type="email"
+        placeholder="Correo electrónico"
+        [(ngModel)]="email"
+      />
+
+      <!-- CONTRASEÑA -->
+      <input
+        type="password"
+        placeholder="Contraseña"
+        [(ngModel)]="password"
+      />
+
+      <!-- ERROR -->
+      <p class="error-text" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+      <!-- BOTÓN LOGIN -->
+      <button class="login-btn" (click)="loginEmail()">
+        Iniciar sesión
+      </button>
+
+      <div class="divider">o</div>
+
+      <!-- LOGIN GOOGLE (FUNCIONA PERFECTO) -->
+      <button class="google-btn" (click)="loginGoogle()">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg">
+        Iniciar con Google
+      </button>
+
+      <!-- SIGNUP -->
+      <p class="signup-text">
+        ¿No tienes cuenta?
+        <a routerLink="/signup">Crea una aquí</a>
+      </p>
+
+    </div>
+  </div>
+</div>

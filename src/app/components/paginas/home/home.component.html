@@ -1,0 +1,49 @@
+<section class="home">
+
+  <!-- Barra superior -->
+  <header class="top-bar">
+    <h2>¡Bienvenido, {{ usuarioNombre }}!</h2>
+    <button class="logout" (click)="logout()">Cerrar sesión</button>
+  </header>
+
+  <!-- Caja de fecha -->
+  <section class="fecha">
+    <label><strong>Selecciona una fecha para tu cita:</strong></label>
+    <input type="date" [(ngModel)]="fechaSeleccionada" />
+    <p class="msg-error" *ngIf="mostrarErrorFecha">Debes seleccionar una fecha antes de agendar.</p>
+  </section>
+
+  <h3 class="subtitulo">Profesionales disponibles</h3>
+
+  <!-- Grid de profesionales -->
+  <section class="profesionales">
+    <article class="card" *ngFor="let p of profesionales">
+      <img [src]="p.imagen" class="foto" />
+
+      <h4>{{ p.nombre }}</h4>
+      <p class="especialidad">{{ p.especialidad }}</p>
+
+      <p class="descripcion">{{ p.descripcion }}</p>
+
+      <button class="btn-agendar" (click)="agendar(p)">
+        Agendar cita
+      </button>
+    </article>
+  </section>
+
+  <!-- Acciones -->
+  <section class="acciones">
+    <button class="btn-turnos" (click)="verTurnos()">Ver mis turnos</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Psico-Agenda — Atención profesional con el corazón 💙</p>
+    <p>Desarrollado por <a href="https://github.com/Andresito22idk/psico-agenda" target="_blank">Andresito22idk</a></p>
+    <p>Diseño y desarrollo de <a href="https://github.com/Andresito22idk/psico-agenda" target="_blank">Andresito22idk</a></p>
+    <p>todos los derechos reservados © 2025 Psico-Agenda</p>
+  </footer>
+
+</section>
+
+
