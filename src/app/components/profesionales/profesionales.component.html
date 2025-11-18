@@ -1,0 +1,30 @@
+<div class="prof-page">
+
+  <h2 class="titulo">Nuestros Profesionales</h2>
+
+  <div *ngIf="loading" class="mensaje">Cargando...</div>
+
+  <div *ngIf="!loading && profesionales.length === 0" class="mensaje">
+    No hay profesionales cargados.
+  </div>
+
+  <div class="lista">
+    <div class="pro-card" *ngFor="let p of profesionales">
+
+      <div class="pro-header">
+        <strong>{{ p.nombre }}</strong>
+        <span class="especialidad">{{ p.especialidad }}</span>
+      </div>
+
+      <div class="pro-info">
+        <div><strong>Descripción:</strong> {{ p.descripcion || 'No disponible' }}</div>
+        <div><strong>Experiencia:</strong> {{ p.experiencia || 'No especificada' }}</div>
+        <div><strong>Teléfono:</strong> {{ p.telefono || 'No disponible' }}</div>
+      </div>
+
+    </div>
+  </div>
+
+  <button (click)="volverHome()" class="volver">Volver</button>
+
+</div>

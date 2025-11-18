@@ -1,0 +1,61 @@
+.titulo {
+  text-align: center;
+  font-size: 26px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cargando,
+.no-turnos {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.lista {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  background: #fafafa;
+}
+
+.estado {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* COLORES DE ESTADO */
+.pendiente {
+  color: #d4a024;
+}
+
+.confirmada,
+.agendado {
+  color: #2e8b57;
+}
+
+.cancelada {
+  color: crimson;
+}
+
+.btn-volver {
+  display: block;
+  margin: 25px auto;
+  padding: 10px 25px;
+  background: #006eff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-volver:hover {
+  background: #0055c4;
+}

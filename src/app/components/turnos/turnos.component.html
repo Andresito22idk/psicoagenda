@@ -1,0 +1,32 @@
+<h2 class="titulo">Mis turnos</h2>
+
+<!-- LOADING -->
+<p *ngIf="loading" class="cargando">Cargando...</p>
+
+<!-- SIN TURNOS -->
+<p *ngIf="!loading && turnos.length === 0" class="no-turnos">
+  No tienes turnos solicitados.
+</p>
+
+<!-- LISTA -->
+<div *ngIf="!loading && turnos.length > 0" class="lista">
+
+  <div *ngFor="let t of turnos" class="tarjeta">
+
+    <p><strong>Profesional:</strong> {{ t.profesionalNombre }}</p>
+    <p><strong>Especialidad:</strong> {{ t.profesionalEspecialidad }}</p>
+
+    <p><strong>Fecha:</strong> {{ t.fecha }}</p>
+    <p><strong>Hora:</strong> {{ t.hora }}</p>
+
+    <!-- ESTADO CON COLOR -->
+    <p class="estado" [ngClass]="t.estado">
+      Estado: {{ t.estado | titlecase }}
+    </p>
+
+  </div>
+
+</div>
+
+<!-- BOTÓN VOLVER -->
+<button class="btn-volver" (click)="volver()">Volver</button>

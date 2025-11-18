@@ -1,0 +1,7 @@
+/* src/app/components/paginas/admin/admin.component.css */
+.admin-page { max-width:1000px; margin:auto; padding:20px; font-family:Inter, sans-serif; }
+.admin-card { display:flex; justify-content:space-between; gap:12px; align-items:center; padding:12px; margin:10px 0; background:white; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,.06); }
+.acciones button { margin-left:8px; padding:8px 10px; border-radius:8px; cursor:pointer; }
+.acciones button:first-child { background:#2ecc71; color:white; border:none; }
+.acciones button:nth-child(2) { background:#e74c3c; color:white; border:none; }
+.acciones button:nth-child(3) { background:#f39c12; color:white; border:none; }

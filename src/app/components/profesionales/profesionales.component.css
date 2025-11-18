@@ -1,0 +1,58 @@
+.prof-page {
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.mensaje {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pro-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.pro-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.especialidad {
+  font-size: 14px;
+  color: #555;
+}
+
+.pro-info div {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.volver {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 8px;
+  background: #1976d2;
+  color: #fff;
+  font-size: 16px;
+}

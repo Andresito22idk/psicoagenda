@@ -1,0 +1,21 @@
+<!-- src/app/components/paginas/admin/admin.component.html -->
+<div class="admin-page">
+  <h2>Panel Admin — Turnos</h2>
+  <div *ngIf="loading">Cargando turnos...</div>
+  <div *ngIf="!loading && turnos.length===0">No hay turnos.</div>
+
+  <div *ngFor="let t of turnos" class="admin-card">
+    <div class="info">
+      <div><strong>{{ t.profesionalNombre }}</strong> — {{ t.profesionalEspecialidad }}</div>
+      <div>Usuario: {{ t.userNombre }} ({{ t.userEmail }})</div>
+      <div>Fecha: {{ t.fecha }} · Hora: {{ t.hora }}</div>
+      <div>Estado: <strong>{{ t.estado }}</strong></div>
+    </div>
+
+    <div class="acciones">
+      <button (click)="aceptar(t)">Aceptar cita</button>
+      <button (click)="cancelar(t)">Cancelar cita</button>
+      <button (click)="reagendar(t)">Cambiar fecha</button>
+    </div>
+  </div>
+</div>

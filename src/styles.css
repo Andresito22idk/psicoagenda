@@ -2,3 +2,71 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* --- RESET BÁSICO --- */
+* {
+  box-sizing: border-box;
+}
+
+/* --- HEADER GLOBAL --- */
+.main-header {
+  width: 100%;
+  background: #0b3b6b;
+  padding: 14px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.nav-links a {
+  margin-left: 26px;
+  color: #cfe4ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .2s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* --- HERO --- */
+.hero-section {
+  width: 100%;
+  padding: 80px 40px;
+  background: url("https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=1350&q=60")
+    center/cover no-repeat;
+  color: white;
+  text-align: center;
+}
+
+.hero-section h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* --- FOOTER GLOBAL --- */
+.footer-global {
+  width: 100%;
+  padding: 22px;
+  text-align: center;
+  color: #446;
+  font-size: 13px;
+  margin-top: 30px;
+}
+

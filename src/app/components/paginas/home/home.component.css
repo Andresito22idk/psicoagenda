@@ -1,105 +1,193 @@
-.home {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+/* src/app/components/paginas/home/home.component.css */
+/* --- ESTILO GENERAL --- */
+.home-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 28px 24px;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: #11324d;
+  background: linear-gradient(180deg,#ffffff 0%, #fbfdff 100%);
 }
 
-/* Barra superior */
-.top-bar {
+/* --- HEADER --- */
+.header-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 0;
-}
-
-.logout {
-  background: #e74c3c;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* Fecha */
-.fecha {
-  margin-top: 20px;
-}
-
-.fecha input[type="date"] {
-  padding: 8px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-.msg-error {
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-/* Subtítulo */
-.subtitulo {
-  margin-top: 25px;
-  font-size: 22px;
-}
-
-/* Cards */
-.profesionales {
-  margin-top: 20px;
-  display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.titulo-bienvenida {
+  font-size: 28px;
+  color: #0b3b6b;
+  font-weight: 800;
+  margin: 0;
+}
+.lead {
+  margin: 6px 0 0;
+  color: #566a78;
 }
 
-.card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-}
-
-.foto {
-  width: 100px;
-  margin-bottom: 10px;
-}
-
-.especialidad {
-  color: #666;
-}
-
-/* Botón agendar */
-.btn-agendar {
-  margin-top: 10px;
-  background: #3498db;
-  padding: 8px 14px;
+/* LOGOUT */
+.btn-logout {
+  background: #ff6b6b;
   color: white;
   border: none;
+  padding: 10px 18px;
   border-radius: 10px;
-  cursor: pointer;
-}
-
-/* Acciones */
-.acciones {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.btn-turnos {
-  background: #27ae60;
-  padding: 10px 16px;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-/* Footer */
-.footer {
-  margin-top: 40px;
-  text-align: center;
-  color: #888;
   font-size: 14px;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+  box-shadow: 0 6px 18px rgba(255,107,107,0.12);
+}
+.btn-logout:hover { transform: translateY(-2px); }
+
+/* --- FECHA --- */
+.fecha-box {
+  background: linear-gradient(90deg,#eaf5ff, #f4fbff);
+  padding: 14px;
+  border-radius: 12px;
+  margin-top: 16px;
+  width: 52%;
+  box-shadow: 0 6px 18px rgba(16,72,128,0.05);
+}
+.fecha-box label {
+  font-weight:700;
+  color: #0b3b6b;
+}
+input[type="date"] {
+  margin-left: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: solid 1px #cfe7ff;
+  background:#fff;
+}
+
+.error-text {
+  margin-top: 8px;
+  color: #c23b3b;
+  font-weight:600;
+}
+
+/* --- TITULO PROFESIONALES --- */
+.prof-title {
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0b3b6b;
+}
+
+/* --- GRID --- */
+.profesionales-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 18px;
+}
+
+/* TARJETA */
+.prof-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbff 100%);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(8,28,56,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+  border: 1px solid rgba(30,80,140,0.04);
+}
+.prof-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px rgba(8,28,56,0.08);
+}
+
+.prof-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* TEXTOS */
+.prof-nombre {
+  font-size: 18px;
+  color: #073656;
+  margin: 0 0 6px 0;
+  font-weight: 800;
+}
+.prof-especialidad {
+  color: #1160aa;
+  font-weight: 700;
+  margin-top: -2px;
+}
+.prof-descripcion {
+  margin-top: 10px;
+  color: #4b5b6b;
+  font-size: 14px;
+  line-height: 1.35;
+  max-height: 3.9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* BOTONES y HORAS */
+.ver-horas-label { margin-top: 10px; font-weight: 700; color: #0b3b6b; }
+
+.btn-ver-horas {
+  margin-top: 10px;
+  width: 100%;
+  background: linear-gradient(180deg,#e4f1ff,#d7ecff);
+  border: none;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #0b3b6b;
+}
+.btn-ver-horas:hover { filter: brightness(.98); }
+
+.horas-list { margin-top: 10px; display:flex; flex-wrap:wrap; gap:8px; }
+
+.hora-btn {
+  padding: 8px 12px;
+  border-radius: 9px;
+  border: 1px solid #cfe7ff;
+  background: white;
+  cursor: pointer;
+  font-weight: 700;
+  transition: .12s;
+}
+.hora-btn:hover { transform: translateY(-2px); background:#eaf4ff; }
+.hora-btn.selected { background:#2f8fd6; color:white; border-color:transparent; }
+.hora-btn:disabled { background:#ececec; color:#8a8a8a; cursor:not-allowed; transform: none; }
+
+/* AGENDAR */
+.btn-agendar {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(180deg,#2f8fd6,#216fb0);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+  box-shadow: 0 8px 24px rgba(47,143,214,0.18);
+}
+.btn-agendar:hover { transform: translateY(-3px); }
+
+/* ENLACE A TURNOS */
+.turnos-link { margin-top: 18px; text-align:center; }
+.turnos-link a { color: #0b3b6b; font-weight:700; cursor:pointer; }
+
+/* FOOTER */
+footer { margin-top: 40px; text-align:center; color:#6b7a8a; font-size:13px; padding-bottom:30px; }
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .profesionales-grid { grid-template-columns: repeat(2,1fr); }
+  .fecha-box { width: 100%; }
+}
+@media (max-width: 640px) {
+  .profesionales-grid { grid-template-columns: 1fr; }
+  .titulo-bienvenida { font-size: 20px; }
 }
